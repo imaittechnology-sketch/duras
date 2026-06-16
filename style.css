@@ -181,46 +181,59 @@ header {
   font-size: 0.85rem;
 }
 
-/* Traction Section */
+/* Traction Section with Images */
 .traction {
   background: #f8f9fa;
 }
 
 .traction-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
 .traction-box {
   background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .traction-box:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.traction-icon {
-  font-size: 2.5rem;
-  color: var(--main-color);
-  margin-bottom: 0.5rem;
+.traction-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.traction-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.traction-box:hover .traction-img img {
+  transform: scale(1.05);
 }
 
 .traction-box h3 {
   font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem 0.25rem 1rem;
   color: var(--text-color);
 }
 
 .traction-box p {
   font-size: 0.85rem;
   color: #555;
+  padding: 0 1rem 1rem 1rem;
   line-height: 1.5;
 }
 
